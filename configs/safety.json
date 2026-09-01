@@ -1,0 +1,18 @@
+{
+  "policy_version": "safety-v1",
+  "scope": "adultos sintéticos com HAS e DM2",
+  "input_controls": [
+    "prompt_injection",
+    "record_write_attempt",
+    "out_of_scope_population",
+    "strict_request_schema"
+  ],
+  "output_controls": [
+    "operational_prescription",
+    "citation_integrity",
+    "citation_effective_date",
+    "grounding_required",
+    "human_validation_for_sensitive_classes"
+  ],
+  "fail_mode": "closed"
+}

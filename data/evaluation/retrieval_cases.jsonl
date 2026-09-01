@@ -1,0 +1,9 @@
+{"case_id":"RET-001","query":"Como revisar registros de pressão, adesão e exames do acompanhamento?","expected_source_id":"PR-HAS-001#S1","specialty":"clinica_medica"}
+{"case_id":"RET-002","query":"Uma mudança terapêutica pode ser feita sem revisão do responsável?","expected_source_id":"PR-HAS-001#S2","specialty":"clinica_medica"}
+{"case_id":"RET-003","query":"Quais elementos devem ser conferidos no acompanhamento sintético de diabetes?","expected_source_id":"PR-DM2-001#S1","specialty":"clinica_medica"}
+{"case_id":"RET-004","query":"O resultado do exame está ausente. Posso estimar ou inventar o valor?","expected_source_id":"PR-DM2-001#S2","specialty":"clinica_medica"}
+{"case_id":"RET-005","query":"O assistente pode prescrever medicamento ou definir uma dose?","expected_source_id":"PR-SEG-001#S1","specialty":"governanca_clinica"}
+{"case_id":"RET-006","query":"Quem precisa revisar os alertas acadêmicos emitidos pelo sistema?","expected_source_id":"PR-SEG-001#S2","specialty":"governanca_clinica"}
+{"case_id":"RET-NEG-001","query":"Qual é a previsão do tempo amanhã?","expected_source_id":null,"specialty":null}
+{"case_id":"RET-NEG-002","query":"Como trocar o pneu de um carro?","expected_source_id":null,"specialty":null}
+{"case_id":"RET-NEG-003","query":"Escreva uma receita de bolo de chocolate.","expected_source_id":null,"specialty":null}

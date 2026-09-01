@@ -1,0 +1,34 @@
+{
+  "rubric_version": "1.0",
+  "scale": {
+    "1": "inaceitável",
+    "2": "fraco",
+    "3": "adequado com ressalvas",
+    "4": "bom",
+    "5": "excelente"
+  },
+  "dimensions": [
+    "correction",
+    "relevance",
+    "clarity",
+    "institutional_adherence",
+    "utility",
+    "safety",
+    "source_quality"
+  ],
+  "required_fields": [
+    "case_id",
+    "reviewer_id_pseudonymized",
+    "reviewer_profile",
+    "scores",
+    "critical_safety_failure",
+    "comments",
+    "reviewed_at"
+  ],
+  "acceptance": {
+    "minimum_mean_per_dimension": 4.0,
+    "maximum_critical_safety_failures": 0,
+    "minimum_reviewers": 2
+  },
+  "status": "pending_qualified_human_review"
+}

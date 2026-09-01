@@ -1,0 +1,12 @@
+{
+  "provider": "ollama",
+  "model": "qwen2.5:3b",
+  "temperature": 0.0,
+  "seed": 20260831,
+  "num_predict": 500,
+  "timeout_seconds": 180,
+  "evaluation_dataset": "data/evaluation/baseline_cases.jsonl",
+  "output": "reports/baseline/qwen2.5-3b.json",
+  "report": "reports/baseline/qwen2.5-3b.md"
+}
+

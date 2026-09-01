@@ -1,0 +1,56 @@
+{
+  "thread_id": "demo-prescription-001",
+  "paused_status": "awaiting_human_review",
+  "interrupt": {
+    "kind": "clinical_response_review",
+    "allowed_decisions": [
+      "approve",
+      "reject"
+    ],
+    "intent": "prescription",
+    "alert_flags": [
+      "PRESCRIPTION_REQUEST"
+    ],
+    "response": {
+      "status": "insufficient_evidence",
+      "response_class": "refusal",
+      "summary": "Pedido de prescrição ou dose bloqueado por regra determinística.",
+      "patient_context_used": [],
+      "guidance": "A definição de medicamento ou dose exige avaliação do profissional responsável.",
+      "pending_exams": [],
+      "alerts": [
+        "PRESCRIPTION_REQUEST"
+      ],
+      "sources": [],
+      "confidence": "low",
+      "requires_human_validation": true,
+      "validation_reason": "Regra sensível exige revisão humana.",
+      "limitations": [
+        "Resposta criada sem inferência da LLM."
+      ],
+      "disclaimer": "Protótipo acadêmico de apoio à decisão; não substitui avaliação profissional."
+    }
+  },
+  "final_status": "completed",
+  "review_status": "reject",
+  "final_response": {
+    "status": "insufficient_evidence",
+    "response_class": "refusal",
+    "summary": "Pedido de prescrição ou dose bloqueado por regra determinística.",
+    "patient_context_used": [],
+    "guidance": "A resposta foi rejeitada na revisão humana; não a utilize.",
+    "pending_exams": [],
+    "alerts": [
+      "PRESCRIPTION_REQUEST"
+    ],
+    "sources": [],
+    "confidence": "low",
+    "requires_human_validation": false,
+    "validation_reason": "Pedido de dose não pode ser liberado pelo assistente.",
+    "limitations": [
+      "Resposta criada sem inferência da LLM.",
+      "Resposta rejeitada pelo revisor humano."
+    ],
+    "disclaimer": "Protótipo acadêmico de apoio à decisão; não substitui avaliação profissional."
+  }
+}

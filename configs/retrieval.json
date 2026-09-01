@@ -1,0 +1,12 @@
+{
+  "embedding_model": "intfloat/multilingual-e5-small",
+  "protocols_file": "data/synthetic/protocols.json",
+  "index_file": "data/indexes/protocols-e5-small.json",
+  "evaluation_file": "data/evaluation/retrieval_cases.jsonl",
+  "report_file": "reports/retrieval/evaluation.json",
+  "batch_size": 8,
+  "max_length": 512,
+  "top_k": 3,
+  "minimum_score": 0.84,
+  "as_of": "2026-09-01"
+}

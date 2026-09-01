@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "assistente-medico-fiap"
+version = "0.1.0"
+description = "Protótipo acadêmico de assistente médico — Tech Challenge Fase 3."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "Proprietary" }
+dependencies = [
+  "langchain-core>=1.2,<2",
+  "langgraph>=1.2,<2",
+  "pydantic>=2.10,<3",
+  "streamlit>=1.62,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "jsonschema>=4.23,<5",
+  "mypy>=1.11,<2",
+  "pytest>=8.3,<9",
+  "pytest-cov>=5,<7",
+  "reportlab>=4.4,<5",
+  "ruff>=0.6,<1",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers --cov=assistente_medico --cov-report=term-missing"
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+  "e2e: testes offline que atravessam todos os componentes da aplicação",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["assistente_medico"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+fail_under = 90
+precision = 2
+
+[tool.ruff]
+line-length = 88
+src = ["src", "tests", "scripts"]
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["B", "C4", "E", "F", "I", "N", "PT", "RUF", "SIM", "UP", "W"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+mypy_path = "src"
+packages = ["assistente_medico"]

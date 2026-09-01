@@ -1,0 +1,37 @@
+{
+  "dataset_name": "assistente-medico-sintetico-fiap",
+  "dataset_version": "1.0.0",
+  "seed": 20260831,
+  "synthetic": true,
+  "clinical_use_allowed": false,
+  "disclaimer": "Conteúdo sintético para demonstração acadêmica; requer validação humana e não deve ser usado para decisão clínica real.",
+  "strategy": "group_hash",
+  "group_field": "group_id",
+  "target_ratio": {
+    "train": 0.7,
+    "validation": 0.2,
+    "test": 0.1
+  },
+  "assignments": {
+    "PR-HAS-001": "train",
+    "PR-DM2-001": "train",
+    "PR-SEG-001": "train",
+    "PAT-SYN-001": "train",
+    "PAT-SYN-002": "validation",
+    "PAT-SYN-003": "train",
+    "PAT-SYN-004": "train",
+    "PAT-SYN-005": "validation",
+    "PAT-SYN-006": "validation",
+    "PAT-SYN-007": "train",
+    "PAT-SYN-008": "train",
+    "PAT-SYN-009": "test",
+    "PAT-SYN-010": "train",
+    "PAT-SYN-011": "train",
+    "PAT-SYN-012": "train"
+  },
+  "counts": {
+    "train": 11,
+    "validation": 3,
+    "test": 1
+  }
+}

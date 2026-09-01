@@ -1,0 +1,62 @@
+[
+  {
+    "protocol_id": "PR-HAS-001",
+    "title": "Acompanhamento sintético de hipertensão",
+    "specialty": "clinica_medica",
+    "version": "1.0",
+    "status": "active",
+    "effective_date": "2026-01-01",
+    "sections": [
+      {
+        "section_id": "S1",
+        "heading": "Revisão periódica",
+        "content": "Revisar registros sintéticos de pressão, adesão informada e exames marcados no plano individual."
+      },
+      {
+        "section_id": "S2",
+        "heading": "Limite do assistente",
+        "content": "Qualquer sugestão de mudança terapêutica exige revisão do profissional responsável."
+      }
+    ]
+  },
+  {
+    "protocol_id": "PR-DM2-001",
+    "title": "Acompanhamento sintético de diabetes tipo 2",
+    "specialty": "clinica_medica",
+    "version": "1.0",
+    "status": "active",
+    "effective_date": "2026-01-01",
+    "sections": [
+      {
+        "section_id": "S1",
+        "heading": "Revisão periódica",
+        "content": "Conferir exames previstos no plano sintético, sintomas informados e registro de adesão."
+      },
+      {
+        "section_id": "S2",
+        "heading": "Dados insuficientes",
+        "content": "Não inferir resultado ausente; registrar a lacuna e encaminhar para avaliação profissional."
+      }
+    ]
+  },
+  {
+    "protocol_id": "PR-SEG-001",
+    "title": "Segurança e escalonamento do assistente",
+    "specialty": "governanca_clinica",
+    "version": "1.0",
+    "status": "active",
+    "effective_date": "2026-01-01",
+    "sections": [
+      {
+        "section_id": "S1",
+        "heading": "Prescrição",
+        "content": "O assistente não emite prescrição, dose ou alteração terapêutica definitiva."
+      },
+      {
+        "section_id": "S2",
+        "heading": "Alerta",
+        "content": "Alertas são sinalizações acadêmicas e devem ser revisados por uma pessoa autorizada."
+      }
+    ]
+  }
+]

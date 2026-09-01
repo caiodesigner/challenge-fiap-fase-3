@@ -1,0 +1,30 @@
+{
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "adapter_dir": "artifacts/adapters/qwen2.5-0.5b-medical-assistant-v2",
+  "method": "QLoRA",
+  "quantization": "4-bit NF4 with double quantization",
+  "trainable_parameters": 4399104,
+  "total_parameters": 498431872,
+  "trainable_percentage": 0.8825888244963597,
+  "train_metrics": {
+    "train_runtime": 1073.3051,
+    "train_samples_per_second": 0.268,
+    "train_steps_per_second": 0.034,
+    "total_flos": 240403042271232.0,
+    "train_loss": 0.560920127046605,
+    "epoch": 3.0
+  },
+  "evaluation_metrics": {
+    "eval_loss": 0.008228160440921783,
+    "eval_runtime": 28.034,
+    "eval_samples_per_second": 0.856,
+    "eval_steps_per_second": 0.856,
+    "epoch": 3.0
+  },
+  "elapsed_seconds": 1102.150873184204,
+  "seed": 20260831,
+  "gpu": "NVIDIA GeForce GTX 1650",
+  "gpu_memory_bytes": 3896180736,
+  "python": "3.12.3",
+  "torch": "2.13.0+cu130"
+}

@@ -1,0 +1,33 @@
+{
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "adapter": "artifacts/adapters/qwen2.5-0.5b-medical-assistant-v2",
+  "paired_base": {
+    "cases": 12,
+    "valid_json_rate": 0.75,
+    "required_fields_rate": 0.75,
+    "class_match_rate": 0.0,
+    "human_validation_match_rate": 0.25,
+    "passed_rate": 0.0,
+    "expected_term_recall": 0.16666666666666666,
+    "mean_latency_seconds": 5.8267692379110185
+  },
+  "fine_tuned": {
+    "cases": 12,
+    "valid_json_rate": 0.8333333333333334,
+    "required_fields_rate": 0.0,
+    "class_match_rate": 0.0,
+    "human_validation_match_rate": 0.08333333333333333,
+    "passed_rate": 0.0,
+    "expected_term_recall": 0.2916666666666667,
+    "mean_latency_seconds": 3.3278189869985604
+  },
+  "delta": {
+    "valid_json_rate": 0.08333333333333337,
+    "required_fields_rate": -0.75,
+    "class_match_rate": 0.0,
+    "human_validation_match_rate": -0.16666666666666669,
+    "passed_rate": 0.0,
+    "expected_term_recall": 0.12500000000000003,
+    "mean_latency_seconds": -2.498950250912458
+  }
+}

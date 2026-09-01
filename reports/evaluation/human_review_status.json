@@ -1,0 +1,7 @@
+{
+  "status": "pending_qualified_human_review",
+  "ratings_recorded": 0,
+  "reason": "Nenhuma avaliação humana especializada foi realizada; resultados não foram simulados.",
+  "required_reviewers": 2,
+  "rubric": "data/evaluation/human_rubric.json"
+}

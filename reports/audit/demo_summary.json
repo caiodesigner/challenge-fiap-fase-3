@@ -1,0 +1,135 @@
+{
+  "execution_id": "021e943e-d17c-4178-aab5-f1acb2a1aacc",
+  "events": [
+    {
+      "event_id": "ba7ac1a7-80e8-4f45-95fc-5e659a291fbe",
+      "execution_id": "021e943e-d17c-4178-aab5-f1acb2a1aacc",
+      "timestamp": "2026-09-01T17:42:47.912518Z",
+      "event_type": "execution_started",
+      "actor_role": "professional",
+      "status": "started",
+      "thread_ref": "sha256:5bb33b90da687b17",
+      "patient_ref": "sha256:e1b953867e48608c",
+      "duration_ms": null,
+      "metadata": {
+        "model_version": "Qwen/Qwen2.5-0.5B-Instruct",
+        "adapter_version": "qwen2.5-0.5b-medical-assistant-v2",
+        "prompt_version": "1.0.0",
+        "retrieval_version": "protocols-e5-small",
+        "safety_policy_version": "safety-v1"
+      },
+      "details": {
+        "question_length": 29
+      }
+    },
+    {
+      "event_id": "45a4e76a-3782-4ee7-9648-1e42ee17508b",
+      "execution_id": "021e943e-d17c-4178-aab5-f1acb2a1aacc",
+      "timestamp": "2026-09-01T17:42:47.921412Z",
+      "event_type": "execution_paused",
+      "actor_role": "professional",
+      "status": "awaiting_human_review",
+      "thread_ref": "sha256:5bb33b90da687b17",
+      "patient_ref": null,
+      "duration_ms": 8.897,
+      "metadata": {
+        "model_version": "Qwen/Qwen2.5-0.5B-Instruct",
+        "adapter_version": "qwen2.5-0.5b-medical-assistant-v2",
+        "prompt_version": "1.0.0",
+        "retrieval_version": "protocols-e5-small",
+        "safety_policy_version": "safety-v1"
+      },
+      "details": {
+        "intent": "urgent",
+        "alert_flags": [
+          "POTENTIALLY_URGENT_SYMPTOM"
+        ],
+        "safety_flags": [],
+        "errors": [],
+        "response_status": "insufficient_evidence",
+        "response_class": "alert",
+        "patient_context_used": [],
+        "source_ids": [],
+        "review_status": null
+      }
+    },
+    {
+      "event_id": "0247b39b-2be2-4617-9982-5cd461b9c5a7",
+      "execution_id": "021e943e-d17c-4178-aab5-f1acb2a1aacc",
+      "timestamp": "2026-09-01T17:42:47.921794Z",
+      "event_type": "human_review_submitted",
+      "actor_role": "reviewer",
+      "status": "reject",
+      "thread_ref": "sha256:5bb33b90da687b17",
+      "patient_ref": null,
+      "duration_ms": null,
+      "metadata": {
+        "model_version": "Qwen/Qwen2.5-0.5B-Instruct",
+        "adapter_version": "qwen2.5-0.5b-medical-assistant-v2",
+        "prompt_version": "1.0.0",
+        "retrieval_version": "protocols-e5-small",
+        "safety_policy_version": "safety-v1"
+      },
+      "details": {
+        "decision": "reject",
+        "feedback_length": 38
+      }
+    },
+    {
+      "event_id": "a048ca47-f635-4b2b-a8b9-e9f88444f163",
+      "execution_id": "021e943e-d17c-4178-aab5-f1acb2a1aacc",
+      "timestamp": "2026-09-01T17:42:47.924486Z",
+      "event_type": "execution_completed",
+      "actor_role": "reviewer",
+      "status": "completed",
+      "thread_ref": "sha256:5bb33b90da687b17",
+      "patient_ref": null,
+      "duration_ms": 2.609,
+      "metadata": {
+        "model_version": "Qwen/Qwen2.5-0.5B-Instruct",
+        "adapter_version": "qwen2.5-0.5b-medical-assistant-v2",
+        "prompt_version": "1.0.0",
+        "retrieval_version": "protocols-e5-small",
+        "safety_policy_version": "safety-v1"
+      },
+      "details": {
+        "intent": "urgent",
+        "alert_flags": [
+          "POTENTIALLY_URGENT_SYMPTOM"
+        ],
+        "safety_flags": [],
+        "errors": [],
+        "response_status": "insufficient_evidence",
+        "response_class": "refusal",
+        "patient_context_used": [],
+        "source_ids": [],
+        "review_status": "reject"
+      }
+    }
+  ],
+  "explanation": {
+    "execution_id": "021e943e-d17c-4178-aab5-f1acb2a1aacc",
+    "intent": "urgent",
+    "patient_data_categories": [],
+    "sources": [],
+    "deterministic_rules": [
+      "POTENTIALLY_URGENT_SYMPTOM"
+    ],
+    "safety_decisions": [],
+    "human_review": {
+      "status": "reject",
+      "feedback": "recorded"
+    },
+    "errors": [],
+    "limitations": [
+      "Resposta criada sem inferência da LLM.",
+      "Resposta rejeitada pelo revisor humano."
+    ]
+  },
+  "privacy_checks": {
+    "raw_patient_in_log": false,
+    "raw_thread_in_log": false,
+    "raw_question_in_log": false
+  },
+  "paused_execution_id_matches": true
+}

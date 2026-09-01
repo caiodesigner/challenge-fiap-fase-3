@@ -1,0 +1,21 @@
+{
+  "dataset_version": "2.0.0",
+  "seed": 20260831,
+  "synthetic": true,
+  "clinical_use_allowed": false,
+  "strategy": "group_hash_80_20",
+  "categories": {
+    "summary": 20,
+    "pending": 20,
+    "missing": 20,
+    "prescription": 20,
+    "source": 20,
+    "alert": 20
+  },
+  "counts": {
+    "train": 96,
+    "validation": 24
+  },
+  "content_sha256": "3544976531f0e3f68d62c517438c62c16df6bd84e4e98438a7d10215649d1ea2",
+  "evaluation_dataset_modified": false
+}

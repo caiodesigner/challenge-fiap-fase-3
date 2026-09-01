@@ -1,0 +1,199 @@
+[
+  {
+    "patient_id": "PAT-SYN-001",
+    "synthetic": true,
+    "age_years": 58,
+    "conditions": [
+      "HAS"
+    ],
+    "allergies": [],
+    "current_medications": [],
+    "completed_exam_codes": [
+      "EX-PRESSAO"
+    ],
+    "pending_exam_codes": [],
+    "last_review_date": "2026-01-15"
+  },
+  {
+    "patient_id": "PAT-SYN-002",
+    "synthetic": true,
+    "age_years": 64,
+    "conditions": [
+      "DM2"
+    ],
+    "allergies": [],
+    "current_medications": [],
+    "completed_exam_codes": [
+      "EX-GLICEMIA"
+    ],
+    "pending_exam_codes": [
+      "EX-REVISAO-A"
+    ],
+    "last_review_date": "2026-02-15"
+  },
+  {
+    "patient_id": "PAT-SYN-003",
+    "synthetic": true,
+    "age_years": 71,
+    "conditions": [
+      "HAS",
+      "DM2"
+    ],
+    "allergies": [],
+    "current_medications": [],
+    "completed_exam_codes": [
+      "EX-PRESSAO"
+    ],
+    "pending_exam_codes": [
+      "EX-REVISAO-B"
+    ],
+    "last_review_date": "2026-03-15"
+  },
+  {
+    "patient_id": "PAT-SYN-004",
+    "synthetic": true,
+    "age_years": 49,
+    "conditions": [
+      "HAS"
+    ],
+    "allergies": [],
+    "current_medications": [],
+    "completed_exam_codes": [
+      "EX-PRESSAO",
+      "EX-REVISAO-A"
+    ],
+    "pending_exam_codes": [],
+    "last_review_date": "2026-04-15"
+  },
+  {
+    "patient_id": "PAT-SYN-005",
+    "synthetic": true,
+    "age_years": 55,
+    "conditions": [
+      "DM2"
+    ],
+    "allergies": [],
+    "current_medications": [],
+    "completed_exam_codes": [
+      "EX-GLICEMIA"
+    ],
+    "pending_exam_codes": [],
+    "last_review_date": "2026-05-15"
+  },
+  {
+    "patient_id": "PAT-SYN-006",
+    "synthetic": true,
+    "age_years": 68,
+    "conditions": [
+      "HAS",
+      "DM2"
+    ],
+    "allergies": [],
+    "current_medications": [],
+    "completed_exam_codes": [
+      "EX-GLICEMIA"
+    ],
+    "pending_exam_codes": [
+      "EX-REVISAO-A"
+    ],
+    "last_review_date": "2026-06-15"
+  },
+  {
+    "patient_id": "PAT-SYN-007",
+    "synthetic": true,
+    "age_years": 45,
+    "conditions": [
+      "HAS"
+    ],
+    "allergies": [],
+    "current_medications": [],
+    "completed_exam_codes": [
+      "EX-PRESSAO"
+    ],
+    "pending_exam_codes": [],
+    "last_review_date": "2026-01-15"
+  },
+  {
+    "patient_id": "PAT-SYN-008",
+    "synthetic": true,
+    "age_years": 62,
+    "conditions": [
+      "DM2"
+    ],
+    "allergies": [],
+    "current_medications": [],
+    "completed_exam_codes": [
+      "EX-REVISAO-B"
+    ],
+    "pending_exam_codes": [
+      "EX-REVISAO-A"
+    ],
+    "last_review_date": "2026-02-15"
+  },
+  {
+    "patient_id": "PAT-SYN-009",
+    "synthetic": true,
+    "age_years": 73,
+    "conditions": [
+      "HAS",
+      "DM2"
+    ],
+    "allergies": [],
+    "current_medications": [],
+    "completed_exam_codes": [
+      "EX-PRESSAO"
+    ],
+    "pending_exam_codes": [
+      "EX-REVISAO-B"
+    ],
+    "last_review_date": "2026-03-15"
+  },
+  {
+    "patient_id": "PAT-SYN-010",
+    "synthetic": true,
+    "age_years": 52,
+    "conditions": [
+      "HAS"
+    ],
+    "allergies": [],
+    "current_medications": [],
+    "completed_exam_codes": [
+      "EX-PRESSAO"
+    ],
+    "pending_exam_codes": [],
+    "last_review_date": "2026-04-15"
+  },
+  {
+    "patient_id": "PAT-SYN-011",
+    "synthetic": true,
+    "age_years": 60,
+    "conditions": [
+      "DM2"
+    ],
+    "allergies": [],
+    "current_medications": [],
+    "completed_exam_codes": [
+      "EX-GLICEMIA"
+    ],
+    "pending_exam_codes": [],
+    "last_review_date": "2026-05-15"
+  },
+  {
+    "patient_id": "PAT-SYN-012",
+    "synthetic": true,
+    "age_years": 66,
+    "conditions": [
+      "HAS",
+      "DM2"
+    ],
+    "allergies": [],
+    "current_medications": [],
+    "completed_exam_codes": [
+      "EX-GLICEMIA"
+    ],
+    "pending_exam_codes": [
+      "EX-REVISAO-A"
+    ],
+    "last_review_date": "2026-06-15"
+  }
+]

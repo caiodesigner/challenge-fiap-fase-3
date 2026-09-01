@@ -1,0 +1,8 @@
+{
+  "dataset_name": "assistente-medico-sintetico-fiap",
+  "dataset_version": "1.0.0",
+  "seed": 20260831,
+  "synthetic": true,
+  "clinical_use_allowed": false,
+  "disclaimer": "Conteúdo sintético para demonstração acadêmica; requer validação humana e não deve ser usado para decisão clínica real."
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "template_id": "TPL-LAUDO-001",
+    "document_type": "laudo",
+    "title": "Modelo sintético de laudo",
+    "fields": [
+      "patient_id",
+      "exam_code",
+      "result_summary",
+      "review_status"
+    ],
+    "required_human_validation": true
+  },
+  {
+    "template_id": "TPL-RECEITA-001",
+    "document_type": "receita",
+    "title": "Estrutura sintética de receita não operacional",
+    "fields": [
+      "patient_id",
+      "professional_review",
+      "status"
+    ],
+    "required_human_validation": true,
+    "restriction": "O assistente não preenche medicamento, dose ou assinatura."
+  },
+  {
+    "template_id": "TPL-PROC-001",
+    "document_type": "procedimento",
+    "title": "Checklist sintético de procedimento interno",
+    "fields": [
+      "patient_id",
+      "procedure_code",
+      "prerequisites",
+      "review_status"
+    ],
+    "required_human_validation": true
+  }
+]

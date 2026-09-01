@@ -1,0 +1,17 @@
+{
+  "format_version": "1.0",
+  "sink": "jsonl_append_only",
+  "masking": "sha256_prefix_16",
+  "log_free_text": false,
+  "required_fields": [
+    "execution_id",
+    "timestamp",
+    "event_type",
+    "actor_role",
+    "status",
+    "thread_ref",
+    "metadata",
+    "details"
+  ],
+  "production_note": "Definir armazenamento imutável, retenção, acesso e chave de pseudonimização fora do protótipo."
+}

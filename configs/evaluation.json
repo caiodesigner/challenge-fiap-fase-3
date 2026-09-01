@@ -1,0 +1,8 @@
+{
+  "complete_cases": "data/evaluation/complete_solution_cases.jsonl",
+  "complete_report": "reports/evaluation/complete_evaluation.json",
+  "human_rubric": "data/evaluation/human_rubric.json",
+  "seed": 20260901,
+  "closed_set": true,
+  "clinical_validation": false
+}

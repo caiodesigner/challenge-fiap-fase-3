@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+build/
+dist/
+*.egg-info/
+.env
+.env.*
+!.env.example
+outputs/
+reports/generated/
+data/database/*.db
+
+# Mantém no Git apenas o adaptador final v2 e seus metadados essenciais.
+artifacts/adapters/qwen2.5-0.5b-medical-assistant/
+artifacts/adapters/*/checkpoint-*/

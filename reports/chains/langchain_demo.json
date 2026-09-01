@@ -1,0 +1,42 @@
+{
+  "prompt_version": "1.0.0",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "adapter": "artifacts/adapters/qwen2.5-0.5b-medical-assistant-v2",
+  "elapsed_seconds": 12.207219837000594,
+  "response": {
+    "status": "model_output_rejected",
+    "response_class": "insufficient_evidence",
+    "summary": "Não foi possível produzir uma resposta validada.",
+    "patient_context_used": [
+      "buscar_resultados_recentes",
+      "buscar_resumo_paciente",
+      "listar_exames_pendentes"
+    ],
+    "guidance": "Encaminhe a solicitação para avaliação profissional.",
+    "pending_exams": [
+      {
+        "exam_code": "EX-REVISAO-B",
+        "requested_at": "2026-03-01",
+        "status": "pending"
+      }
+    ],
+    "alerts": [],
+    "sources": [
+      {
+        "source_id": "PR-HAS-001#S2",
+        "document": "PR-HAS-001",
+        "section": "S2",
+        "version": "1.0",
+        "effective_date": "2026-01-01",
+        "score": 0.8406599306752174
+      }
+    ],
+    "confidence": "low",
+    "requires_human_validation": true,
+    "validation_reason": "A saída da LLM foi rejeitada por não cumprir o schema.",
+    "limitations": [
+      "A saída da LLM foi rejeitada por não cumprir o schema."
+    ],
+    "disclaimer": "Protótipo acadêmico de apoio à decisão; não substitui avaliação profissional."
+  }
+}
