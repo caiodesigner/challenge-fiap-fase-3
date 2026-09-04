@@ -10,11 +10,11 @@
 | R12 | Validação humana | `interrupt` + `Command(resume)` | testes de pausa/retomada | demo LangGraph |
 | R13 | Logging | eventos JSONL por `execution_id` | reconstrução E2E | demo de auditoria |
 | R14 | Fontes e explicação | citações RAG + `explain_state` | validação de fontes | relatórios RAG/auditoria |
-| R15 | Python modular | pacote `assistente_medico` | Ruff, mypy, 72 testes | CI e relatório de qualidade |
+| R15 | Python modular | pacote `assistente_medico` | Ruff, mypy, 73 testes | CI e relatório de qualidade |
 | R16 | README | guia consolidado | revisão documental | `README.md` |
 | R17 | LangGraph | grafo condicional persistido | testes unitários/E2E | código e diagrama |
 | R18 | Dados sintéticos | 12 pacientes e corpus fictício | schemas e validação | `data/README.md` |
 | R19 | Relatório técnico | relatório consolidado | checklist de entrega | Markdown e PDF |
 | R20 | Avaliação | baseline, pareado, tuned, RAG e controles | métricas fechadas | relatório final de avaliação |
-| R21 | Diagramas | cinco diagramas Mermaid | revisão contra código | `docs/diagrams/` |
+| R21 | Diagramas | seis diagramas Mermaid, incluindo fluxo LangChain | revisão contra código | `docs/diagrams/` |
 | R22 | Vídeo ≤15 min | roteiro cronometrado | checklist manual | `docs/roteiro-video.md` |

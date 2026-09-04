@@ -8,8 +8,8 @@
 - [x] RAG, SQLite, ferramentas, LangChain e LangGraph.
 - [x] Human-in-the-loop, segurança, auditoria e explicabilidade.
 - [x] Interface demonstrativa.
-- [x] 72 testes, 95,04% de cobertura, lint e mypy.
-- [x] Cinco diagramas versionados.
+- [x] 73 testes, 95,04% de cobertura, lint e mypy.
+- [x] Seis diagramas versionados, incluindo o fluxo LangChain dedicado.
 - [x] Relatório técnico em Markdown.
 - [x] Matriz de rastreabilidade final.
 - [x] Roteiro de vídeo com até 15 minutos.

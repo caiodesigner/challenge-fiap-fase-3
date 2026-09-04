@@ -2,7 +2,7 @@
 
 ## Preparação antes de gravar
 
-- Executar `make check` e preservar a tela final com 72 testes.
+- Executar `make check` e preservar a tela final com 73 testes.
 - Executar `make evaluate-complete`.
 - Iniciar `make ui` no modo controlado.
 - Deixar abertos README, relatório de fine-tuning, diagrama LangGraph e métricas.
@@ -60,7 +60,7 @@ texto puro.
 
 ### 12:30–13:40 — Avaliação e testes
 
-Mostrar os 72 testes, cobertura de 95,04% e comparação. Esclarecer que 100% dos
+Mostrar os 73 testes, cobertura de 95,04% e comparação. Esclarecer que 100% dos
 controles não significa qualidade clínica e que a rubrica humana está pendente.
 
 ### 13:40–15:00 — Limitações e conclusão

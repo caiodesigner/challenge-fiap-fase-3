@@ -5,6 +5,7 @@ from __future__ import annotations
 from html import escape
 from pathlib import Path
 
+from reportlab.graphics.shapes import Drawing, Line, Polygon, Rect, String
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER
 from reportlab.lib.pagesizes import A4
@@ -23,6 +24,85 @@ from reportlab.platypus import (
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "docs/relatorio-tecnico-final.md"
 OUTPUT = ROOT / "reports/deliverables/relatorio-tecnico-final.pdf"
+
+
+def _langchain_diagram(regular: str, bold: str) -> Drawing:
+    """Cria uma figura vetorial do pipeline sem depender de renderizador externo."""
+    drawing = Drawing(440, 430)
+    teal = colors.HexColor("#0F766E")
+    navy = colors.HexColor("#0F172A")
+    light = colors.HexColor("#E2E8F0")
+    pale = colors.HexColor("#CCFBF1")
+    warning = colors.HexColor("#FEF3C7")
+
+    def box(
+        x: float,
+        y: float,
+        width: float,
+        label: str,
+        *,
+        fill=light,  # type: ignore[no-untyped-def]
+        font: str = regular,
+        size: float = 7.5,
+    ) -> None:
+        drawing.add(Rect(x, y, width, 30, rx=5, ry=5, fillColor=fill, strokeColor=teal))
+        drawing.add(
+            String(
+                x + width / 2,
+                y + 11,
+                label,
+                textAnchor="middle",
+                fontName=font,
+                fontSize=size,
+                fillColor=navy,
+            )
+        )
+
+    def arrow(x1: float, y1: float, x2: float, y2: float) -> None:
+        drawing.add(Line(x1, y1, x2, y2, strokeColor=teal, strokeWidth=1.2))
+        drawing.add(
+            Polygon(
+                [x2 - 3.5, y2 + 6, x2 + 3.5, y2 + 6, x2, y2],
+                fillColor=teal,
+                strokeColor=teal,
+            )
+        )
+
+    box(130, 390, 180, "AssistantRequest validado", fill=pale, font=bold)
+    box(130, 345, 180, "validate_request")
+    box(130, 300, 180, "retrieve_context", font=bold)
+    box(20, 245, 180, "Ferramentas clínicas allowlisted")
+    box(240, 245, 180, "Retriever E5")
+    box(20, 200, 180, "SQLite sintético (somente leitura)")
+    box(240, 200, 180, "Índice de protocolos versionados")
+    box(110, 145, 220, "Prompt com contexto + fontes", fill=pale, font=bold)
+    box(110, 100, 220, "Qwen + adaptador QLoRA")
+    box(110, 55, 220, "Parsing, schema, citações e safety-v1", font=bold)
+    box(110, 10, 220, "AssistantResponse estruturada", fill=pale, font=bold)
+    box(345, 55, 85, "Fallback fail-closed", fill=warning, size=6.3)
+
+    arrow(220, 390, 220, 375)
+    arrow(220, 345, 220, 330)
+    drawing.add(Line(220, 300, 220, 287, strokeColor=teal, strokeWidth=1.2))
+    drawing.add(Line(110, 287, 330, 287, strokeColor=teal, strokeWidth=1.2))
+    arrow(110, 287, 110, 275)
+    arrow(330, 287, 330, 275)
+    arrow(110, 245, 110, 230)
+    arrow(330, 245, 330, 230)
+    drawing.add(Line(110, 200, 110, 185, strokeColor=teal, strokeWidth=1.2))
+    drawing.add(Line(330, 200, 330, 185, strokeColor=teal, strokeWidth=1.2))
+    drawing.add(Line(110, 185, 220, 185, strokeColor=teal, strokeWidth=1.2))
+    drawing.add(Line(330, 185, 220, 185, strokeColor=teal, strokeWidth=1.2))
+    arrow(220, 185, 220, 175)
+    arrow(220, 145, 220, 130)
+    arrow(220, 100, 220, 85)
+    arrow(220, 55, 220, 40)
+    drawing.add(Line(330, 70, 345, 70, strokeColor=teal, strokeWidth=1.2))
+    drawing.add(Line(387.5, 55, 387.5, 25, strokeColor=teal, strokeWidth=1.2))
+    arrow(387.5, 25, 330, 25)
+    drawing.add(String(334, 76, "erro", fontName=regular, fontSize=6.5))
+    drawing.add(String(226, 43, "válida", fontName=regular, fontSize=6.5))
+    return drawing
 
 
 def _fonts() -> tuple[str, str]:
@@ -120,6 +200,18 @@ def build_pdf(source: Path = SOURCE, output: Path = OUTPUT) -> Path:
             continue
         if not line:
             flush_paragraph()
+            continue
+        if line == "[[LANGCHAIN_DIAGRAM]]":
+            flush_paragraph()
+            story.append(_langchain_diagram(regular, bold))
+            story.append(
+                Paragraph(
+                    "Figura 1 — Fluxo da RunnableSequence LangChain e suas "
+                    "dependências controladas.",
+                    body,
+                )
+            )
+            story.append(Spacer(1, 8))
             continue
         if line.startswith("#"):
             flush_paragraph()

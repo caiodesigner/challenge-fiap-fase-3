@@ -92,6 +92,15 @@ A LangChain usa uma `RunnableSequence` para validação, enriquecimento, geraç�
 parsing. Timeout, indisponibilidade, paciente inexistente, ausência de evidência
 e JSON inválido produzem fallback de baixa confiança.
 
+### Fluxo LangChain
+
+[[LANGCHAIN_DIAGRAM]]
+
+O diagrama apresenta a consulta estruturada ao prontuário e a recuperação de
+protocolos como entradas independentes do prompt. A saída da LLM customizada só
+é liberada depois do parsing, da validação do schema, das citações e da política
+de segurança. Falhas seguem um caminho `fail-closed`.
+
 O LangGraph controla as ramificações e o human-in-the-loop. `interrupt()` pausa o
 estado e `Command(resume=...)` exige o mesmo `thread_id`. Aprovação preserva a
 resposta; rejeição substitui a orientação por uma recusa segura. O checkpointer
@@ -146,7 +155,7 @@ e substitui apenas embedding e geração por fixtures determinísticas.
 
 ## 11. Qualidade e reprodutibilidade
 
-A suíte final possui 72 testes, incluindo quatro jornadas end-to-end, e cobertura
+A suíte final possui 73 testes, incluindo quatro jornadas end-to-end, e cobertura
 global de 95,04%. Ruff, formatação, mypy estrito e validação de dados compõem o
 gate `make check`. A CI GitHub Actions replica o gate em Python 3.12 sem modelos
 externos ou GPU.
