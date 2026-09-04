@@ -3,6 +3,12 @@
 Protótipo acadêmico de apoio à decisão para o acompanhamento de adultos
 sintéticos com hipertensão arterial sistêmica e diabetes mellitus tipo 2.
 
+**Autor:** Caio Lucas Santos Silva
+
+**RM:** rm373689
+
+**Desenvolvimento:** individual
+
 > Este projeto não é um dispositivo médico, não utiliza dados reais e não pode
 > ser usado para diagnóstico, prescrição ou atendimento clínico.
 
@@ -20,11 +26,11 @@ sintéticos com hipertensão arterial sistêmica e diabetes mellitus tipo 2.
 - Etapa 8: segurança determinística e validação adversarial concluídas.
 - Etapa 9: auditoria estruturada e explicabilidade concluídas.
 - Etapa 10: avaliação automatizada e comparação crítica concluídas; avaliação
-  humana especializada permanece pendente.
+  clínica externa é opcional e não foi realizada.
 - Etapa 11: testes end-to-end e pipeline de qualidade/CI concluídos.
 - Etapa 12: interface Streamlit de demonstração concluída.
-- Etapa 13: documentação técnica e pacote de entrega concluídos; vídeo e revisão
-  humana dependem de execução manual pelos autores.
+- Etapa 13: documentação técnica e pacote de entrega concluídos; o vídeo depende
+  de execução manual pelo autor.
 
 Consulte o [plano mestre](PLANO_DESENVOLVIMENTO.md), a
 [especificação da Etapa 0](docs/etapa-0-especificacao.md) e o

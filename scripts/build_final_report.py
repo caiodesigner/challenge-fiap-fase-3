@@ -250,7 +250,7 @@ def build_pdf(source: Path = SOURCE, output: Path = OUTPUT) -> Path:
         topMargin=1.8 * cm,
         bottomMargin=1.5 * cm,
         title="Assistente Médico — Tech Challenge Fase 3",
-        author="Equipe do Tech Challenge FIAP",
+        author="Caio Lucas Santos Silva — RM rm373689",
         subject="Relatório técnico final",
     )
     document.build(story, onFirstPage=_footer, onLaterPages=_footer)

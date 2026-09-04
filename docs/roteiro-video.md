@@ -1,5 +1,9 @@
 # Roteiro do vídeo — limite de 15 minutos
 
+**Apresentador:** Caio Lucas Santos Silva — RM rm373689
+
+**Projeto individual:** Tech Challenge Fase 3
+
 ## Preparação antes de gravar
 
 - Executar `make check` e preservar a tela final com 73 testes.

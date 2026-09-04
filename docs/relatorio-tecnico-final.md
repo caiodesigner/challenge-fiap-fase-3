@@ -4,7 +4,13 @@
 
 **Natureza:** protótipo acadêmico com dados exclusivamente sintéticos  
 **Domínio:** acompanhamento ambulatorial de adultos com HAS e DM2  
-**Data de consolidação:** 1º de setembro de 2026
+**Autor:** Caio Lucas Santos Silva
+
+**RM:** rm373689
+
+**Desenvolvimento:** individual
+
+**Data de consolidação:** 4 de setembro de 2026
 
 ## Resumo
 

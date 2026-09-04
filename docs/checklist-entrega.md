@@ -16,7 +16,8 @@
 
 ## Verificação manual antes do envio
 
-- [ ] Preencher nomes/RM do grupo na plataforma de entrega.
+- [x] Identificação individual incluída no README e no relatório técnico.
+- [ ] Conferir nome e RM na plataforma de entrega.
 - [ ] Revisar se a instituição exige licença específica para o código.
 - [ ] Executar `make check` em clone limpo.
 - [ ] Confirmar inclusão do adaptador ou fornecer instrução de obtenção.
@@ -32,5 +33,5 @@
 ## Gates que permanecem abertos
 
 - Avaliação clínica especializada externa: opcional e não realizada.
-- Vídeo: depende de gravação e publicação pelos autores.
+- Vídeo: depende de gravação e publicação pelo autor.
 - Uso clínico: explicitamente não aprovado.
