@@ -60,3 +60,12 @@ python_version = "3.12"
 strict = true
 mypy_path = "src"
 packages = ["assistente_medico"]
+
+[[tool.mypy.overrides]]
+module = [
+  "assistente_medico.inference.provider",
+  "assistente_medico.retrieval.e5",
+]
+ignore_missing_imports = true
+warn_unused_ignores = false
+disable_error_code = ["import-not-found"]

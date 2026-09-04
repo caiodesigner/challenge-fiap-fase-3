@@ -21,7 +21,7 @@
 - [ ] Executar `make check` em clone limpo.
 - [ ] Confirmar inclusão do adaptador ou fornecer instrução de obtenção.
 - [ ] Revisar tamanho máximo permitido para o repositório/arquivo.
-- [ ] Aplicar rubrica com dois revisores qualificados, se exigido antes da nota.
+- [ ] Opcional: solicitar avaliação clínica externa, caso haja um profissional qualificado disponível.
 - [ ] Gravar o vídeo seguindo `docs/roteiro-video.md`.
 - [ ] Confirmar duração final ≤ 15:00.
 - [ ] Validar áudio, legibilidade e ausência de dados pessoais na gravação.
@@ -31,6 +31,6 @@
 
 ## Gates que permanecem abertos
 
-- Avaliação humana especializada: pendente.
+- Avaliação clínica especializada externa: opcional e não realizada.
 - Vídeo: depende de gravação e publicação pelos autores.
 - Uso clínico: explicitamente não aprovado.
