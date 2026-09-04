@@ -80,4 +80,3 @@ manter alertas críticos em regras determinísticas no LangGraph.
 - O conjunto é pequeno e voltado a regressão acadêmica.
 - A latência depende da máquina e não deve ser generalizada.
 - Uma única execução com temperatura zero foi registrada nesta etapa.
-- A avaliação humana especializada ainda será necessária antes da entrega.

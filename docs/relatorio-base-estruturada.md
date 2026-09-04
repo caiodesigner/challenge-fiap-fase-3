@@ -59,8 +59,8 @@ argumento não autorizado são recusadas antes de chegar ao repositório.
 | `listar_medicamentos_ativos` | rótulos registrados |
 
 Cada ferramenta aplica minimização por finalidade; nenhuma retorna o prontuário
-completo. O registro de alertas não foi exposto porque exigirá autorização,
-auditoria e human-in-the-loop nas etapas de segurança e LangGraph.
+completo. O registro de alertas não foi exposto porque o acesso do protótipo é
+deliberadamente somente leitura.
 
 ## Evidência de funcionamento
 
@@ -72,7 +72,5 @@ contato, endereço ou identificador real existe no resultado.
 
 - A base é pequena e inteiramente artificial.
 - Resultados não contêm valores clínicos reais.
-- Autenticação e autorização por usuário ainda não foram implementadas.
-- A base ainda não é chamada pelo LangChain.
-- Escritas e transições de alertas serão adicionadas somente com auditoria.
-
+- A base é consultada pela LangChain por meio das ferramentas permitidas.
+- Escritas e transições de alertas permanecem fora do escopo do protótipo.

@@ -58,6 +58,5 @@ que paciente, thread e pergunta não aparecem em texto puro na trilha.
 
 - JSONL local não oferece imutabilidade, controle de acesso ou retenção de
   produção.
-- As versões são metadados injetados pelo chamador; o bootstrap futuro da API
-  deverá carregá-las das configurações versionadas.
-- Métricas agregadas e avaliação longitudinal pertencem à Etapa 10.
+- As versões são metadados injetados pelo bootstrap a partir das configurações
+  versionadas.

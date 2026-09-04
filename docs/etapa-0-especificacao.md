@@ -50,13 +50,7 @@ O assistente poderá responder sobre protocolos institucionais fictícios, resum
 - Aprova, rejeita ou solicita revisão de uma orientação sensível.
 - Registra justificativa na decisão.
 
-### Administrador técnico
-
-- Configura modelos, protocolos e regras.
-- Consulta logs técnicos mascarados.
-- Não altera resultados clínicos durante uma execução.
-
-## 3. Jornadas obrigatórias do MVP
+## 3. Jornadas do MVP
 
 ### J01 — Consulta a protocolo
 
@@ -190,12 +184,6 @@ Toda resposta final deverá disponibilizar:
 | R17 | Fluxos LangGraph | grafo com estados, ramos e checkpoint | testes de transição e E2E | código, diagrama e vídeo |
 | R18 | Dataset anonimizado ou sintético | dados sintéticos publicados | inspeção automática/manual | diretório `data/` e data card |
 | R19 | Relatório técnico | documento nas seções previstas no plano | checklist documental | relatório fonte e PDF |
-| R20 | Avaliação e resultados | baseline e quatro configurações comparadas | métricas automáticas e rubrica | tabelas, gráficos e análise |
+| R20 | Avaliação e resultados | baseline e quatro configurações comparadas | métricas automáticas | tabelas, gráficos e análise |
 | R21 | Diagrama do fluxo | diagramas versionados | revisão contra código | documentação e relatório |
 | R22 | Vídeo de até 15 minutos | roteiro cronometrado | checklist antes da entrega | link/arquivo final |
-
-## 9. Porta de entrada para a Etapa 1
-
-A Etapa 1 poderá começar com estas decisões como baseline. Se o domínio for alterado posteriormente, deverão ser atualizados conjuntamente este documento, as jornadas, os schemas, os casos de avaliação e a matriz de rastreabilidade.
-
-As primeiras saídas da Etapa 1 deverão ser: catálogo dos documentos sintéticos, schemas de protocolo e prontuário, política de anonimização, gerador de pacientes e plano de divisão dos datasets.

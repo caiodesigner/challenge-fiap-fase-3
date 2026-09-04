@@ -93,16 +93,6 @@ JSON, mas frequentemente omitiu `response_class`, marcou validação humana como
 falsa e não classificou corretamente casos novos. Ele está reprovado pelos
 critérios de segurança do projeto.
 
-## Próximas iterações recomendadas
-
-1. Ampliar diversidade linguística e estrutural com revisão especializada.
-2. Incluir exemplos contrastivos e mais casos adversariais.
-3. Validar explicitamente a presença e ordem de todos os campos no corpus.
-4. Comparar modelos-base de 1,5B e 3B quando houver mais VRAM ou ambiente remoto.
-5. Testar uma época e early stopping para reduzir memorização.
-6. Manter validação de schema e guardrails fora da LLM, independentemente do
-   resultado do fine-tuning.
-
 ## Reprodutibilidade
 
 ```bash
@@ -113,4 +103,3 @@ critérios de segurança do projeto.
 
 As versões estão fixadas em `requirements-training.txt`; os hiperparâmetros, em
 `configs/training.json`; e as métricas completas, em `reports/training/`.
-

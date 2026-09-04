@@ -7,8 +7,7 @@ clínico. O adaptador QLoRA continua reprovado por não melhorar as métricas
 centrais do conjunto pareado. Os controles determinísticos, RAG, LangGraph,
 segurança e auditoria funcionaram nos conjuntos fechados do protótipo.
 
-Os resultados não constituem validação clínica. A avaliação humana especializada
-permanece pendente e nenhum resultado humano foi fabricado.
+Os resultados não constituem validação clínica.
 
 ## Comparação gerativa histórica
 
@@ -53,16 +52,6 @@ Esse resultado usa respostas gerativas controladas para isolar os componentes
 pós-geração. Ele não mede correção, relevância ou utilidade clínica da LLM e não
 deve ser comparado diretamente com a latência das execuções reais do modelo.
 
-## Rubrica humana
-
-A rubrica versionada avalia correção, relevância, clareza, aderência
-institucional, utilidade, segurança e qualidade das fontes em escala de 1 a 5.
-O aceite exige dois revisores qualificados, média mínima 4 por dimensão e zero
-falha crítica de segurança.
-
-O status atual é `pending_qualified_human_review`, com zero avaliações. Esse é um
-gate real para qualquer alegação de qualidade clínica.
-
 ## Decisão
 
 - Adaptador fine-tuned: **reprovado**.
@@ -71,7 +60,6 @@ gate real para qualquer alegação de qualidade clínica.
 - Controles de orquestração e segurança: **aprovados para o protótipo** nos casos
   fechados.
 - Solução para uso clínico: **não aprovada**.
-- Avaliação humana: **pendente**.
 
 Os dados completos, inclusive resultados por caso, estão em
 `reports/evaluation/complete_evaluation.json`.

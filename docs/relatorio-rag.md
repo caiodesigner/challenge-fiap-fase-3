@@ -51,9 +51,9 @@ consultas negativas — clima, automóvel e culinária — ficaram entre 0,814 e
 O valor é válido somente para esta combinação de corpus, modelo e consultas de
 calibração. Ele deverá ser recalibrado sempre que o corpus ou embedder mudar.
 
-Quando nenhum resultado supera o limiar, a camada retorna lista vazia. A futura
-chain deverá converter esse estado em `insufficient_evidence`, nunca em uma
-resposta institucional sem fonte.
+Quando nenhum resultado supera o limiar, a camada retorna lista vazia. A chain
+converte esse estado em `insufficient_evidence`, nunca em uma resposta
+institucional sem fonte.
 
 ## Avaliação
 
@@ -72,11 +72,10 @@ Os resultados completos, incluindo ranking, score e citações, estão em
 
 - O corpus possui apenas seis chunks e favorece métricas altas.
 - Os negativos são poucos e foram usados para calibrar o limiar.
-- Não há avaliação clínica nem revisão especializada dos protocolos.
+- Os protocolos são sintéticos e não possuem validade clínica.
 - A recuperação semântica não garante que o conteúdo seja correto.
 - O índice deve ser reconstruído após mudanças de conteúdo ou modelo.
-- A etapa ainda não conecta o retriever à LLM; isso pertence à integração com
-  LangChain.
+- O retriever é integrado à LLM pela LangChain.
 
 ## Reprodução
 
@@ -84,4 +83,3 @@ Os resultados completos, incluindo ranking, score e citações, estão em
 .venv/bin/python scripts/build_retrieval_index.py
 .venv/bin/python scripts/evaluate_retrieval.py
 ```
-

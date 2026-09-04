@@ -14,8 +14,8 @@ A implementação usa `RunnableLambda` em uma `RunnableSequence` com quatro etap
 3. `generate_with_custom_llm`: monta prompt versionado e chama o adaptador QLoRA.
 4. `validate_structured_response`: aplica parser JSON e schema de saída.
 
-Cada função permanece independente do LangGraph, que será adicionado na próxima
-etapa para controlar ramificações e human-in-the-loop.
+Cada função permanece independente do LangGraph, que controla as ramificações e
+o human-in-the-loop em uma camada externa à chain.
 
 ## Minimização de contexto
 
@@ -80,7 +80,6 @@ O registro completo está em `reports/chains/langchain_demo.json`.
 - O provider local não oferece timeout interrompível de GPU nesta versão.
 - A seleção determinística por palavras-chave é inicial.
 - Não há memória conversacional.
-- Alertas determinísticos e aprovação humana pertencem ao LangGraph.
-- A chain valida estrutura e fontes, mas ainda não verifica semanticamente cada
+- Alertas determinísticos e aprovação humana são tratados pelo LangGraph.
+- A chain valida estrutura e fontes, mas não verifica semanticamente cada
   afirmação produzida pela LLM.
-

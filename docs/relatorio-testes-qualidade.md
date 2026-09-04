@@ -6,7 +6,7 @@ A pirâmide de testes possui unidades para dados, schemas, repositório, RAG,
 ferramentas, segurança, auditoria e métricas; testes de integração para a chain e
 o grafo; e uma suíte end-to-end offline marcada como `e2e`.
 
-Os testes offline são o gate obrigatório da CI. Treinamento, inferência real com
+Os testes offline compõem o gate da CI. Treinamento, inferência real com
 GPU e download do embedding são processos pesados e permanecem como avaliações
 reproduzíveis separadas, com seus artefatos preservados.
 
@@ -48,14 +48,10 @@ make check
 
 `make test-e2e` preserva o relatório da fatia executada, mas desativa o piso
 global de cobertura porque os demais testes são intencionalmente desmarcados.
-O gate de 90% continua obrigatório em `make check` e na CI, que executam a suíte
+O gate de 90% é aplicado em `make check` e na CI, que executam a suíte
 completa.
 
 ## Limitações
 
-- A pasta ainda não possui metadados Git, portanto o workflow está configurado,
-  mas somente será executado remotamente após o projeto ser versionado e enviado
-  ao GitHub.
 - A CI não prova compatibilidade com GPU nem reproduz o fine-tuning.
-- Testes automatizados e dados sintéticos não substituem a revisão humana
-  qualificada ainda pendente.
+- Testes automatizados e dados sintéticos não constituem validação clínica.

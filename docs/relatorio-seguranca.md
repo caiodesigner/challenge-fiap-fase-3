@@ -30,8 +30,8 @@ baixa confiança.
 ## Limites e decisões
 
 - As regras são uma defesa adicional, não uma validação clínica.
-- Detecção por termos possui falsos positivos e negativos; a Etapa 10 medirá o
-  comportamento em um conjunto adversarial maior.
+- Detecção por termos possui falsos positivos e negativos; o comportamento foi
+  medido no conjunto adversarial do projeto.
 - A política não tenta higienizar uma saída perigosa. Ela descarta integralmente
   a orientação original para evitar que fragmentos operacionais sejam expostos.
 - Autorização real, identidade do usuário, rate limiting e gestão de segredos são

@@ -60,8 +60,7 @@ demonstra que a LLM é efetivamente ignorada nessa ramificação.
 
 ## Limitações
 
-- A lista de termos é deliberadamente pequena e será ampliada e testada na Etapa 8.
+- A lista de termos é deliberadamente pequena e possui cobertura adversarial.
 - O classificador atual é determinístico; não substitui triagem clínica.
 - O checkpointer em memória não sobrevive ao encerramento do processo.
-- Logging auditável, autorização do revisor e mascaramento serão tratados na
-  Etapa 9.
+- Logging auditável e mascaramento são integrados ao fluxo final.

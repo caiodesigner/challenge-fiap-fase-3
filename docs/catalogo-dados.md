@@ -1,6 +1,6 @@
 # Catálogo de dados da Fase 3
 
-| Coleção | Papel | Origem | Uso futuro |
+| Coleção | Papel | Origem | Uso no projeto |
 |---|---|---|---|
 | Protocolos | conhecimento e fontes | sintética | RAG e fine-tuning |
 | FAQs | respostas esperadas | sintética | fine-tuning e avaliação |
@@ -12,4 +12,3 @@
 
 Convenções: `PR-*` protocolo, `TPL-*` template, `PAT-SYN-*` paciente,
 `FAQ-*` pergunta geral, `CASE-*` caso e `EX-*` exame abstrato.
-

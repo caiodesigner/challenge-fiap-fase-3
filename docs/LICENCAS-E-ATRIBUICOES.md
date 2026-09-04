@@ -4,7 +4,7 @@
 
 Protótipo acadêmico desenvolvido para o Tech Challenge FIAP. O campo de licença
 do pacote está definido como `Proprietary`; redistribuição pública deve ser
-decidida pelos autores antes da entrega.
+decidida pelo autor antes da entrega.
 
 ## Modelos
 

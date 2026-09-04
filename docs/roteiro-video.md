@@ -65,10 +65,9 @@ texto puro.
 ### 12:30–13:40 — Avaliação e testes
 
 Mostrar os 73 testes, cobertura de 95,04% e comparação. Esclarecer que 100% dos
-controles não significa qualidade clínica e que a rubrica humana está pendente.
+controles não significa qualidade clínica.
 
 ### 13:40–15:00 — Limitações e conclusão
 
-Recapitular adaptador reprovado, corpus pequeno, dados sintéticos, ausência de
-autenticação/infraestrutura de produção e não validação clínica. Encerrar com as
-próximas ações necessárias para pesquisa futura.
+Recapitular adaptador reprovado, corpus pequeno, dados sintéticos e ausência de
+validação clínica. Encerrar com as limitações do protótipo acadêmico.

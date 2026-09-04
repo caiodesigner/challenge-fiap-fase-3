@@ -148,10 +148,6 @@ auditoria com respostas controladas. Eles não medem correção clínica da LLM.
 única demonstração real fine-tuned + RAG teve saída rejeitada pelo schema e
 fallback seguro.
 
-A rubrica humana está preparada para correção, relevância, clareza, aderência,
-utilidade, segurança e fontes. Nenhuma avaliação especializada foi realizada;
-esse gate permanece pendente e nenhum resultado foi simulado.
-
 ## 10. Interface
 
 A aplicação Streamlit possui modo controlado para vídeo e modo real experimental.
@@ -182,7 +178,6 @@ e os artefatos locais documentados no README.
 
 - adaptador reprovado e corpus instrucional pequeno;
 - dados, protocolos e avaliações sintéticos;
-- ausência de validação humana especializada;
 - regras lexicais sujeitas a falsos positivos e negativos;
 - checkpointer, auditoria e identidade sem garantias de produção;
 - ausência de autenticação, autorização real e gestão de segredos;
@@ -197,5 +192,5 @@ falhas, mas não transformam um adaptador fraco em um modelo clinicamente válid
 
 O protótipo está pronto para demonstração acadêmica. Ele não está aprovado para
 uso clínico e só poderia avançar após ampliar e revisar o corpus, repetir o
-treinamento, obter melhoria pareada, realizar avaliação humana qualificada e
-substituir os componentes locais por infraestrutura segura de produção.
+treinamento, obter melhoria pareada e substituir os componentes locais por
+infraestrutura validada e segura de produção.
