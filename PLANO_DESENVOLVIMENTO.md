@@ -48,9 +48,9 @@ O MVP será restrito ao acompanhamento ambulatorial de adultos com hipertensão 
 ## 4. Arquitetura planejada
 
 ```text
-Interface CLI/API
+Interface Streamlit/CLI
        |
-Validação da entrada e autorização simulada
+Validação da entrada
        |
 LangGraph — orquestrador clínico
        +--> prontuário estruturado
@@ -70,21 +70,7 @@ Resposta estruturada + fontes + auditoria
 - Regras determinísticas tratarão alertas críticos que não devem depender somente da LLM.
 - O LangGraph controlará estado, decisões, falhas e aprovação humana.
 
-## 5. Estrutura pretendida
-
-```text
-data/{raw,synthetic,processed,splits,schemas}/
-configs/{model,training,retrieval,safety}.yaml
-src/assistente_medico/
-  domain/ data/ training/ inference/ retrieval/ repositories/
-  tools/ chains/ graph/ safety/ audit/ evaluation/ api/
-scripts/
-tests/{unit,integration,safety,evaluation}/
-docs/
-reports/{metrics,figures,deliverables}/
-```
-
-## 6. Etapas de desenvolvimento
+## 5. Etapas de desenvolvimento
 
 ### Etapa 0 — Formalizar escopo e critérios
 
@@ -93,14 +79,12 @@ reports/{metrics,figures,deliverables}/
 - Fechar o domínio clínico do MVP.
 - Definir jornadas demonstráveis.
 - Separar apoio, alerta e prescrição.
-- Criar matriz de rastreabilidade entre requisito, código, teste e evidência.
-- Definir critérios de aceite antes do desenvolvimento.
 
-**Saída:** especificação aprovada em `docs/etapa-0-especificacao.md`.
+**Saída:** escopo clínico e limites definidos.
 
 ### Etapa 1 — Modelar e preparar dados sintéticos
 
-**Status: concluída para o corpus inicial; ampliação e revisão especializada são portas de entrada da Etapa 3.**
+**Status: concluída para o corpus sintético do projeto.**
 
 - Criar protocolos fictícios, FAQs, modelos de laudos, modelos estruturais de receitas e procedimentos.
 - Criar pacientes, prontuários, exames e eventos clínicos sintéticos.
@@ -115,7 +99,7 @@ reports/{metrics,figures,deliverables}/
 
 **Status: concluída com `qwen2.5:3b`; conjunto fechado e resultados preservados.**
 
-- Selecionar o modelo-base e documentar sua licença.
+- Selecionar o modelo-base.
 - Criar conjunto fixo de avaliação não usado no treino.
 - Avaliar respostas, segurança, aderência, formato, alucinações, latência e recursos.
 - Preservar resultados para a comparação final.
@@ -125,16 +109,16 @@ reports/{metrics,figures,deliverables}/
 ### Etapa 3 — Executar o fine-tuning
 
 **Status: concluída como experimento reproduzível. O adaptador foi gerado, mas
-reprovado para uso por não melhorar as métricas centrais de segurança; novas
-iterações ficam condicionadas à ampliação e revisão especializada do corpus.**
+reprovado para uso por não melhorar as métricas centrais de segurança. Novas
+iterações seriam melhoria futura, não requisito desta entrega.**
 
 - Usar modelo instrucional aberto compatível com o hardware.
 - Aplicar PEFT com LoRA ou QLoRA.
 - Versionar template, dados, seed, hiperparâmetros e ambiente.
 - Monitorar treino e validação; salvar adaptadores, checkpoints, logs e curvas.
-- Criar model card simplificado.
 
-**Aceite:** pipeline reproduzível e evidência de melhoria sobre o baseline em métricas predefinidas.
+**Aceite:** pipeline reproduzível, adaptador preservado e resultados avaliados e
+documentados, inclusive quando não houver melhoria sobre o baseline.
 
 ### Etapa 4 — Implementar protocolos e RAG
 
@@ -208,21 +192,20 @@ mascaramento, reconstrução da trilha e explicação derivada do estado.**
 
 ### Etapa 10 — Avaliar a solução
 
-**Status: avaliação automatizada concluída e resultados consolidados. A rubrica
-humana foi preparada, mas permanece pendente de dois revisores qualificados; o
-adaptador e a solução para uso clínico seguem não aprovados.**
+**Status: avaliação automatizada concluída e resultados consolidados. O
+adaptador segue reprovado e nenhuma validação clínica do sistema é alegada.**
 
 - Avaliar perguntas factuais e contextualizadas, pendências, urgências, ausência de evidência, pedidos proibidos e ataques.
 - Comparar modelo-base, fine-tuned, fine-tuned + RAG e solução completa.
 - Medir aderência, Recall@K/MRR, fundamentação, precisão das citações, segurança, recusas, alertas, validade estrutural e latência.
-- Aplicar rubrica humana de correção, relevância, clareza, aderência, utilidade, segurança e fontes.
 
 **Aceite:** relatório comparativo com resultados, erros, limitações e análise crítica.
 
 ### Etapa 11 — Garantir testes e qualidade
 
 **Status: concluída com suíte unitária/integrada, quatro jornadas end-to-end
-offline, cobertura mínima obrigatória e workflow de CI para Python 3.12.**
+offline, gate de cobertura e workflow de CI para Python 3.12. Estes controles
+são evidências de qualidade do código, não entregáveis adicionais do enunciado.**
 
 - Criar testes unitários de dados, regras, schemas, fontes e logs.
 - Criar testes de integração do modelo, retriever, banco, grafo e human-in-the-loop.
@@ -239,37 +222,16 @@ visualização dos requisitos e revisão humana no checkpoint.**
 
 ### Etapa 13 — Finalizar documentação e entrega
 
-**Status: pacote técnico concluído com README, relatório Markdown/PDF, cinco
-diagramas, matriz final, licenças, checklist e roteiro. Gravação/publicação do
-vídeo e avaliação humana permanecem ações manuais dos autores.**
+**Status: pacote técnico concluído com README, relatório Markdown/PDF, seis
+diagramas e roteiro. A gravação e publicação do vídeo permanece como ação manual
+do autor.**
 
-- Completar README com instalação, configuração, dados, fine-tuning, avaliação, execução, testes, segurança e licenças.
+- Completar README com instalação, configuração, dados, fine-tuning, avaliação, execução e segurança.
 - Produzir relatório com arquitetura, governança, treinamento, LangChain/LangGraph, avaliação, resultados, erros e limitações.
-- Criar diagramas de arquitetura, LangGraph, preparação dos dados, treinamento e sequência de consulta.
+- Incluir no relatório o diagrama do fluxo LangChain.
 - Preparar e gravar vídeo de no máximo 15 minutos.
 
-## 7. Cronograma sugerido
-
-1. **Sprint 1:** escopo, schemas, dados sintéticos e avaliação.
-2. **Sprint 2:** baseline, fine-tuning e seleção do checkpoint.
-3. **Sprint 3:** RAG, prontuário estruturado, ferramentas e LangChain.
-4. **Sprint 4:** LangGraph, segurança, human-in-the-loop, logs e fontes.
-5. **Sprint 5:** testes, avaliação comparativa e refinamento.
-6. **Sprint 6:** README, relatório, diagramas, demonstração e vídeo.
-
-## 8. Roteiro do vídeo
-
-1. 0:00–1:00 — problema, escopo e segurança.
-2. 1:00–2:30 — arquitetura e LangGraph.
-3. 2:30–4:30 — dados, anonimização e fine-tuning.
-4. 4:30–6:00 — baseline versus fine-tuned.
-5. 6:00–10:00 — consulta contextualizada e fluxo automatizado.
-6. 10:00–11:30 — pendências e alertas.
-7. 11:30–13:00 — recusa segura e validação humana.
-8. 13:00–14:00 — fontes, logs e auditoria.
-9. 14:00–15:00 — resultados, limitações e conclusão.
-
-## 9. Definição global de pronto
+## 6. Definição global de pronto
 
 - [x] Pipeline reproduzível de fine-tuning.
 - [x] LLM customizada realmente carregada pelo assistente.
@@ -280,8 +242,7 @@ vídeo e avaliação humana permanecem ações manuais dos autores.**
 - [x] Detecção de pendências e alertas.
 - [x] Condutas sensíveis submetidas à validação humana.
 - [x] Logs auditáveis e explicabilidade.
-- [x] Testes funcionais, adversariais e de integração.
-- [x] Comparação do fine-tuned com o baseline.
+- [x] Avaliação do modelo e análise crítica dos resultados.
 - [x] README e relatório completos.
 - [ ] Vídeo com todos os itens obrigatórios em até 15 minutos.
 - [x] Ausência de dados reais, credenciais e segredos no repositório.
